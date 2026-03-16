@@ -197,7 +197,11 @@ Pelo método de partições, dois sistemas operacionais não rodam simultaneamen
   
 - Como o computador sabe qual sistema iniciar?
 
+Ao ligar o PC, a BIOS/UEFI realiza um teste de verificação chamado POST (Power-On Self-Test) e procura o dispositivo de armazenamento (SSD ou HD) que contém as instruções de inicialização. Em seguida, a BIOS/UEFI transfere o controle para um bootloader (como o GRUB no Linux), que é um software responsável por carregar o sistema operacional. No caso de existir dois sistemas operacionais (dual boot), o bootloader oferece a opção de escolha para o usuário.
+
 - O que é partição?
+
+Uma partição é a divisão lógica de um disco rígido físico (HD ou SSD) em segmentos menores e independentes
 
 - O que pode dar errado instalando dual boot?
 
