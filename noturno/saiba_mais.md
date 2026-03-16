@@ -223,15 +223,31 @@ A escolha entre dual boot e máquina virtual (VM) depende do seu objetivo e hard
 
 - O que é UEFI e por que substituiu a BIOS tradicional?
 
+A UEFI (Unified Extensible Firmware Interface) é um firmware moderno que desempenha as mesmas funções da BIOS, mas oferece uma alternativa mais rápida, segura e compatível com sistemas atuais.
+
 - O que é firmware?
+
+É um software gravado em um hardware(chip físico).
 
 - BIOS/UEFI fica no disco?
 
+Não, a BIOS/UEFI fica gravada no chip de memória não volátil na placa-mãe.
+
 - O que é Secure Boot?
+
+Secure Boot é um recurso de inicialização que garante que o sistema operacional só carregue softwares confiáveis, devidamente assinados pelo fabricante.
 
 - O Secure Boot impede Linux?
 
+O secure boot não impede o linux por si, só se o sistema for inicializado com softwares que não foram devidamente assinados.
+
 - Por que alguns sistemas são aceitos e outros não?
 
+Os sistemas aceitos possuem uma trusted key que permitem a inicialização com secure boot
+
 - O que significa uma chave confiável no processo de boot?
+
+Uma chave confiável (ou trusted key) no processo de boot, especificamente no contexto do Secure Boot (Inicialização Segura) UEFI, é uma assinatura digital criptográfica armazenada no firmware do computador (BIOS/UEFI) que atua como um "selo de aprovação" para softwares
+
+
 
