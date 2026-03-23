@@ -374,32 +374,60 @@ Na prática não! No Linux tudo é um arquivo — incluindo os próprios comando
 
 - O que significa "tudo é arquivo"?
 
+No Linux, "tudo é um arquivo" não é apenas uma expressão — é a filosofia central do sistema. Literalmente tudo é representado como um arquivo: programas, configurações, processos, dispositivos de hardware como o teclado e o mouse, partições do disco, conexões de rede e até a memória RAM. Cada um desses elementos possui um arquivo correspondente em algum lugar do sistema de arquivos. Isso é poderoso porque significa que você pode interagir, ler e até modificar qualquer componente do sistema da mesma forma — abrindo, lendo ou escrevendo em arquivos, geralmente através do terminal.
+
 - Filesystem é só um monte de pastas?
+
+Não apenas isso! O filesystem é um sistema organizado, elaborado e padronizado que vai muito além de simples pastas. Ele define onde cada componente do sistema, programa e arquivo de configuração deve estar armazenado, permitindo que tanto o sistema quanto o usuário saibam exatamente onde encontrar cada elemento. Uma característica marcante do Linux é que grande parte das configurações do sistema são armazenadas em arquivos de texto simples, o que facilita a edição e personalização diretamente pelo terminal. Tudo isso segue um padrão bem definido, chamado FHS — Filesystem Hierarchy Standard —, que estabelece a estrutura de diretórios adotada pela maioria das distribuições Linux.
 
 - Qual é a diferença entre filesystem e armanezamento?
 
+O filesystem é a camada lógica responsável pela organização e padronização dos arquivos no sistema — ele define a estrutura, a hierarquia e as regras de como os arquivos são armazenados e acessados. Já o armazenamento é o hardware físico onde tudo de fato reside, como um HD ou SSD. Em outras palavras, o filesystem é o como os arquivos são organizados, enquanto o armazenamento é o onde eles ficam guardados.
+
 - O filesystem existe no disco ou no sistema operacional?
+
+Os dois estão profundamente relacionados. O filesystem é gravado fisicamente no disco, mas é o sistema operacional que o interpreta e o torna acessível. Ao mesmo tempo, o próprio sistema operacional reside dentro do filesystem — tornando os dois interdependentes.
 
 - O que significa dizer que tudo começa em `/`?
 
+O / é o diretório raiz do sistema, também chamado de root. Ele é o ponto de origem de todo o filesystem — todos os outros diretórios, arquivos, dispositivos e configurações partem dele. É como o tronco de uma árvore: tudo o mais são galhos que se ramificam a partir desse ponto central.
+
 - Por que Linux não usa `C:` e `D:` como o Windows?
+
+No Windows, cada disco ou partição recebe uma letra — como C: ou D: — o que é uma herança direta do MS-DOS, seu sistema operacional ancestral. No Linux, no entanto, a filosofia é diferente: seguindo o princípio de que tudo é um arquivo, os discos e partições não recebem letras, mas sim pontos de montagem dentro do filesystem. Por exemplo, um disco adicional pode ser montado em /mnt/disco e acessado como qualquer outro diretório. Tudo parte do / e os dispositivos de armazenamento são simplesmente integrados a essa hierarquia, sem a necessidade de identificadores separados.
 
 - O que é a raiz do sistema?
 
+A raiz do sistema é a origem — o ponto a partir do qual partem todas as ramificações do filesystem. Representada pelo /, ela é o diretório mais alto da hierarquia, do qual todos os outros diretórios e arquivos se ramificam.
+
 - `/` e `/root` são a mesma coisa?
+
+Não, e é importante não confundir os dois! O / é a raiz do sistema — o ponto de origem de todo o filesystem, do qual tudo parte. Já o /root é o diretório pessoal do superusuário, o root. Por ser uma conta com acesso total ao sistema, seu diretório fica separado dos diretórios dos usuários comuns, que residem em /home.
 
 - O que é `/home`?
 
+O /home é o diretório onde residem as pastas pessoais de cada usuário do sistema. Cada usuário possui seu próprio subdiretório dentro do /home — por exemplo, /home/joao —, onde são armazenados seus arquivos pessoais, como documentos, imagens e downloads. Além disso, é lá que ficam guardadas as configurações pessoais de cada usuário, como preferências de programas e personalizações do ambiente, que variam de usuário para usuário.
+
 - Por que cada pasta do Linux parece ter uma função específica?
+
+Porque cada uma tem mesmo! Isso é resultado do FHS (Filesystem Hierarchy Standard), o padrão que define a função de cada diretório no Linux. Por exemplo, o /bin armazena os programas e comandos essenciais do sistema, o /proc guarda informações sobre os processos em andamento, o /dev é onde o sistema interage com os dispositivos de hardware, e o /home contém os diretórios pessoais dos usuários. Essa padronização garante que qualquer usuário ou programa saiba exatamente onde encontrar cada componente, independentemente da distribuição Linux utilizada.
 
 - Quem decidiu essa organização das pastas?
 
+Essa organização foi definida pela comunidade Linux através do FHS (Filesystem Hierarchy Standard), um padrão criado coletivamente com o objetivo de garantir que as diferentes distribuições Linux organizem seus arquivos de forma consistente. Isso significa que, independentemente de você estar usando Ubuntu, Fedora ou qualquer outra distribuição, a estrutura de diretórios seguirá as mesmas convenções.
+
 - O que acontece se eu apagar alguma pasta importante do sistema?
+
+Você pode quebrar o seu sistema! Apagou /home -> perdeu arquivos pessoais. Apagou /boot -> sistema não vai mais inicializar.
 
 - Um diretório é um arquivo?
 
+Sim, tudo é um arquivo! Mas o diretório é um arquivo especial no qual seus dados são referencias para arquivos e outros diretórios.
+
 - Dispositivos também aparecem como arquivos?
 
+ Sim! O diretório /dev é o diretório onde se encontra todos os dispositivos conectados.
+ 
 - Qual é a diferença entre arquivo, pasta, diretório e partição?
 
 Um arquivo é a unidade de dados, a pasta/diretório é a estrutura organizadoa e a partição é a divisão lógica de um disco.
