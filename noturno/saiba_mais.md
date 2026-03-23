@@ -299,13 +299,15 @@ Dá. Você pode digitar o nome do programa no terminal e ele abrirá a interface
 
 - Terminal e prompt são a mesma coisa?
 
-Não. O terminal é a interface textual, o prompt é a parte que indica que o sistema está esperando você digitar algo.
+Não. O terminal é o ambiente onde você digita e executa comandos, enquanto o prompt é o indicador visual em texto que aparece dentro do terminal para sinalizar que ele está pronto para receber um novo comando.
 
 - O que é shell?
 
+Shell é o interpretador de comandos. Quando você digita um comando no terminal, ele o interpreta e aciona o programa ou o kernel correspondente, que é responsável por se comunicar diretamente com o hardware para executar a ação solicitada.
+
 - Terminal e shell são a mesma coisa?
 
-Também não. O terminal é onde você vê e digita. O shell é o programa que interpreta o comando.
+Não. O terminal tem a função de receber os comandos que você digita e exibir os resultados, enquanto o shell tem a função de interpretá-los e executá-los.
 
 - O terminal é uma "linguagem de programação"?
 
@@ -313,10 +315,16 @@ Não exatamente. Você digita comandos, não "programa" necessariamente. Mas she
 
 - Tudo no Linux precisa ser feito pelo terminal?
 
+Não! As distribuições vêm com suas próprias interfaces gráficas, como GNOME, KDE e XFCE. No entanto, o uso do terminal é aconselhado para tarefas mais avançadas e administrativas.
+
 - O terminal é mais difícil ou só menos familiar?
+
+O terminal oferece mais controle, eficiência e rapidez, sendo ideal para tarefas administrativas. No entanto, isso vem com um custo: uma curva de aprendizado maior.
 
 - O que acontece quando eu digito um comando?
 
+O terminal recebe o comando, o shell o interpreta e aciona o programa ou o kernel correspondente, que por sua vez interage com o hardware para executar a ação solicitada.
+ 
 - Como o sistema sabe o que significa `ls` ou `cd`?
 
 - Onde os comandos ficam guardados?
