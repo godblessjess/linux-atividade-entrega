@@ -95,3 +95,73 @@ Responda:
 - Para que serve a linha `#!/bin/bash`?
 - Por que o script não executa sem permissão adequada?
 - O que `chmod +x` faz?
+
+## Tarefa V
+
+1. Descubra qual é seu usuário atual
+2. Veja os grupos dos quais você faz parte
+3. Liste as permissões do script criado
+4. Crie um arquivo chamado `segredo.txt`
+5. Dê permissão do arquivo apenas para o dono
+
+Comandos:
+- whoami
+- id
+- groups
+- ls -l
+- touch
+- chmod 600
+- ls -l
+
+Responda:
+- O que significa `600`?
+- Quem pode ler ou alterar esse arquivo agora?
+- Qual é a diferença entre permissões de leitura, escrita e execução?
+
+## Tarefa VI
+
+Tente listar o conteúdo do diretório `/root` sem `sudo` e depois com `sudo`.
+
+Comandos:
+- ls
+- sudo ls
+
+Responda:
+- O que aconteceu sem `sudo`?
+- O que mudou com `sudo`?
+- O `sudo` te transforma em root permanentemente?
+
+## Tarefa VII
+
+1. Inicie um processo simples com `sleep`
+2. Encontre esse processo
+3. Encerre o processo
+
+Comandos:
+- sleep 300
+- ps aux | grep sleep
+- kill
+
+Responda:
+- O que é um processo?
+- Qual é a diferença entre programa e processo?
+- O que o comando `kill` faz?
+
+## Tarefa VIII
+
+1. Atualize a lista de pacotes
+2. Pesquise o pacote `tree`
+3. Instale o `tree`
+4. Use o `tree` para mostrar a estrutura da pasta `oficina-linux`
+
+Comandos:
+- sudo apt update
+- apt search tree
+- sudo apt install tree
+- tree
+
+Responda:
+- O que é um gerenciador de pacotes?
+- O que é um pacote?
+- O que `apt update` faz?
+- O que `tree` mostrou sobre sua estrutura de diretórios?
